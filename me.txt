@@ -38,4 +38,7 @@ Background
     Tương tác với icon extensions: chrome.browserAction.onClicked.addListener
     browserAction
     Chrome extensions icon
-    
+Message
+    Chrome extensions send Message
+    chrome.tabs.sendMessage()
+GetMesssage
