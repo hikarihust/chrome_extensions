@@ -65,3 +65,6 @@ Backend
     https://share.zendvn.com/api/findCourse.php?word_find=
     word_find: php, vuejs, reactjs
 Selected
+send 
+    chrome extension contentjs send message from content to popup 
+    
