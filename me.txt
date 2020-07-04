@@ -1,0 +1,11 @@
+                                                        Project 1 
+    
+Change Atributte Element
+    Install basic
+        chrome extensions tutorial
+        https://developer.chrome.com/extensions/getstarted
+        Cài đặt:
+            More Tool -> extensions -> Mở cửa hàng chrome trực tuyến 
+        Tải extensions:
+            More Tool -> extensions -> Để chế độ mode là developer -> Load unpacked
+    
