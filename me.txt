@@ -20,3 +20,13 @@ Change Atributte Element
     Add js
         Remove Element by class 
     
+===============================================================================================
+                                    Project 2 - Change Image
+
+Change Image 
+    chrome extensions invalid
+	"web_accessible_resources": [
+		"images/*.jpg"
+	],
+    Cấp phép để extensions có thể truy cập vào resource của mình
+    

@@ -1,0 +1,21 @@
+{
+	"name": "ChangeImage",
+	"version": "1.2",
+	"description": "Build an Extension! ChangeImage",
+	"manifest_version": 2,
+
+	"web_accessible_resources": [
+		"images/*.jpg"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"], 
+			"css": ["css/myStyles.css"],
+			"js": [
+				"js/libs/jquery.js",
+				"js/content.js"
+			]
+		}
+	]
+}
