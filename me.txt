@@ -42,3 +42,7 @@ Message
     Chrome extensions send Message
     chrome.tabs.sendMessage()
 GetMesssage
+Change all tab
+    chrome.tabs.query({}, callback function)
+    chrome extensions tab get title 
+        "permissions": ["tabs"]

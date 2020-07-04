@@ -6,9 +6,21 @@ function random_item(items)
 }
 
 function iconExtensionClicked(tab){
+    /*
     let color = random_item(["#FF5733", "#3CFF33", "#E5F985", "#1D45F7", "#F71DF0"]);
     chrome.tabs.sendMessage(tab.id, {
         task: "changeBackgroundColor", // changeTextColor
         valueColor: color
+    });
+    */
+   chrome.tabs.query({}, function(tabs) {
+    let color = random_item(["#FF5733", "#3CFF33", "#E5F985", "#1D45F7", "#F71DF0"]);
+    tabs.forEach(function(tab){
+        console.log(tab.title);
+            chrome.tabs.sendMessage(tab.id, {
+                task: "changeBackgroundColor", // changeTextColor
+                valueColor: color
+            });
+        });
     });
 }
