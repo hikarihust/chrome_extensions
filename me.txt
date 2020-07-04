@@ -8,4 +8,6 @@ Change Atributte Element
             More Tool -> extensions -> Mở cửa hàng chrome trực tuyến 
         Tải extensions:
             More Tool -> extensions -> Để chế độ mode là developer -> Load unpacked
+    Add Css 
+        chrome extension content script: Tương tác đến nội dung của trang
     

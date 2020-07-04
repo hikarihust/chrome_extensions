@@ -1,6 +1,15 @@
 {
 	"name": "ChangeFontSize",
-	"version": "1.1",
+	"version": "1.2",
 	"description": "Build an Extension! ChangeFontSize",
-	"manifest_version": 2
+	"manifest_version": 2,
+
+	"content_scripts": [
+		{
+			"matches": ["https://www.24h.com.vn/*"
+						, "https://dantri.com.vn/*"
+					], 
+			"css": ["css/myStyles.css"]
+		}
+	]
 }
