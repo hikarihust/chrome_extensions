@@ -29,4 +29,13 @@ Change Image
 		"images/*.jpg"
 	],
     Cấp phép để extensions có thể truy cập vào resource của mình
+
+===============================================================================================
+                                    Project 3 - Change Background Color 
+
+Background
+    Chrome extensions Background script
+    Tương tác với icon extensions: chrome.browserAction.onClicked.addListener
+    browserAction
+    Chrome extensions icon
     
