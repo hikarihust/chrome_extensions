@@ -57,4 +57,11 @@ Popup html
 Popup js
     chrome.tabs.query({active: true, currentWindow: true}) Để lấy dc tab hiện hành
 Content
-    
+
+===============================================================================================
+                                    Project 5 - API 
+                                
+Backend
+    https://share.zendvn.com/api/findCourse.php?word_find=
+    word_find: php, vuejs, reactjs
+Selected
