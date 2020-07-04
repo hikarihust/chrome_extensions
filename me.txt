@@ -70,4 +70,5 @@ send
 show, background
     contentjs gọi đến background, background là trung gian lưu lại giá trị mà contentjs gửi đến, rồi sau đó
     popup lấy giá trị mà background đã lưu rồi thực hiện truy vấn
+Optimize
     
