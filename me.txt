@@ -56,4 +56,5 @@ Popup html
     Đối với js của popup thì có thể xem ở phần Inspect của icon extensions đó
 Popup js
     chrome.tabs.query({active: true, currentWindow: true}) Để lấy dc tab hiện hành
+Content
     
