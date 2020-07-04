@@ -1,4 +1,8 @@
 
 a {
-    color: red !important;
+    /* color: red !important; */
+}
+
+p.article-summary {
+    /* display: none !important; */
 }

@@ -17,3 +17,6 @@ Change Atributte Element
 					]
             ↓
             "matches": ["<all_urls>"], 
+    Add js
+        Remove Element by class 
+    
