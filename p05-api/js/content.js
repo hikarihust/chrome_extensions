@@ -5,8 +5,8 @@ window.addEventListener('mouseup', function(){
     selectedText     = selectedText.replace(/\s{2,}/g, '');
     if(selectedText.length > 0) {
         chrome.runtime.sendMessage({
-            task: "findCourse", // changeTextColor
-            val: selectedText
+            task: "findCourse",
+            courseStr: selectedText
         });
     }
 });
