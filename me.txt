@@ -36,7 +36,7 @@ Change Image
 Background
     Chrome extensions Background script
     Tương tác với icon extensions: chrome.browserAction.onClicked.addListener
-    browserAction
+    browserAction: Nhận vào tab hiện hành -> có tab, có id của tab
     Chrome extensions icon
 Message
     Chrome extensions send Message
@@ -46,3 +46,14 @@ Change all tab
     chrome.tabs.query({}, callback function)
     chrome extensions tab get title 
         "permissions": ["tabs"]
+
+===============================================================================================
+                                    Project 4 - Change TextVideo Demo
+
+Popup html
+    Đối với nội dung của background.js thì xem ở [Kiểm tra chế độ xem trang nền] của extensions
+    Còn đối với nội dung của content.js thì xem được ở trình duyệt 
+    Đối với js của popup thì có thể xem ở phần Inspect của icon extensions đó
+Popup js
+    chrome.tabs.query({active: true, currentWindow: true}) Để lấy dc tab hiện hành
+    
