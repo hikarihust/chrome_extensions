@@ -10,4 +10,10 @@ Change Atributte Element
             More Tool -> extensions -> Để chế độ mode là developer -> Load unpacked
     Add Css 
         chrome extension content script: Tương tác đến nội dung của trang
-    
+    Matches
+        content_scripts matchs all site 
+			"matches": ["https://www.24h.com.vn/*"
+						, "https://dantri.com.vn/*"
+					]
+            ↓
+            "matches": ["<all_urls>"], 

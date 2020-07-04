@@ -6,9 +6,7 @@
 
 	"content_scripts": [
 		{
-			"matches": ["https://www.24h.com.vn/*"
-						, "https://dantri.com.vn/*"
-					], 
+			"matches": ["<all_urls>"],
 			"css": ["css/myStyles.css"]
 		}
 	]
