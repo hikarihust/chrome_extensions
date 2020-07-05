@@ -105,4 +105,6 @@ Install
         });
     chrome.storage.local chỉ lưu được trên trình duyệt đó thôi
 Load config
+Save config, restore
+    Sau khi thực hiện chrome.storage.sync.set() để lưu xong thì cần đóng màn hình option lại 
     
