@@ -14,6 +14,20 @@ $( document ).ready(function() {
     });
     
     $btnAddTask.click(()=> {
-        console.log("btnAddTask");
+        chrome.storage.sync.get('tasks', function(result) {
+            let currentListTask = (result.hasOwnProperty('tasks')) ? result.tasks : [];
+
+            currentListTask.push({
+                name  : $inputTaskName.val(),
+                status: "progress" 
+            });
+
+            chrome.storage.sync.set({'tasks': currentListTask}, function() {
+                console.log(currentListTask);
+            });
+
+            $inputTaskName.val('');
+            $btnAddTask.attr('disabled', true);
+        });
     })
 });
