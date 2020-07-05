@@ -38,5 +38,9 @@
 		},
 		"default_title": "TaskList",
 		"default_popup": "popup.html" 
-	}
+	},
+
+	"permissions": [
+		"storage"
+	]
 }

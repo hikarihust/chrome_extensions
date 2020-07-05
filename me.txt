@@ -95,3 +95,13 @@ Theme
 Overrides
     Khi cài extension TodoList này vào thì khi mở ra 1 tap mới thì mở ra trang popup TodoList
     chrome extensions Override new tab
+Install
+    Chrome storage 
+    Bắt được sự kiện khi extension TodoList lần đầu được cài đặt 
+        chrome.runtime.oninstalled
+    Lưu vào trong storage, sync sẽ đồng bộ được với tài khoản google
+        chrome.storage.sync.set({
+            config: initConfig
+        });
+    chrome.storage.local chỉ lưu được trên trình duyệt đó thôi
+    
