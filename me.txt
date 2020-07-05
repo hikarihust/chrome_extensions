@@ -73,7 +73,7 @@ show, background
 Optimize
 
 ===============================================================================================
-                                    Project 5 - API
+                                    Project 6 - API
                         
 Contextmenu
     Chrome extension context menu
@@ -85,3 +85,10 @@ SendMessage
 Highlight
     text     = text.replace(new RegExp(message.selectionText, 'g'), htmlReplace);
     Dùng RegExp để thay thế tất cả nội dung đã chọn, nếu ko dùng RegExp thì sẽ chỉ replace nội dung đầu tiên xuất hiện
+
+===============================================================================================
+                                    Project 7 - TodoList
+
+Theme
+    Thêm tùy chọn option cho extensions
+        "options_page": "options.html"

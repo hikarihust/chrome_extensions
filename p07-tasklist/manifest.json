@@ -1,0 +1,32 @@
+{
+	"name": "TaskList",
+	"version": "1.2",
+	"description": "Build an Extension! TaskList",
+	"manifest_version": 2,
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"], 
+			"css": ["css/myStyles.css"],
+			"js": [
+				"js/libs/jquery.js",
+				"js/content.js"
+			]
+		}
+	],
+
+	"options_page": "options.html",
+
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+	
+	"browser_action": {
+		"default_icon": {                    
+            "16": "images/icon_16.png"        
+		},
+		"default_title": "TaskList",
+		"default_popup": "popup.html" 
+	}
+}

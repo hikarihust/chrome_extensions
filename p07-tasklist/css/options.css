@@ -1,0 +1,81 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #eee;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+div.options-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 40px auto 20px;
+    padding: 32px;
+    width: 550px
+}
+
+div.options-content h1 {
+    color: #333333;
+    font-size: 2em;
+    margin: 0.7em 0;
+    text-align: center;
+}
+
+div.options-content h3 {
+    color: #333333;
+    font-size: 1.5em;
+    margin: 0.7em 0;
+    text-align: center;
+}
+
+div.options-content .options_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+div.options-content .options_row .option_label {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+div.options-content .options_row .option_field input, select {
+    box-shadow: none;
+    background-color: #f5f5f5;
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+}
+
+div.options-content .options_button {
+    padding: 10px 0;
+    text-align: center;
+}
+
+div.options-content .options_button button.save {
+    box-shadow: none;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 2px;
+}
+
+div.options-content .options_button button.restore {
+    box-shadow: none;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #444;
+    padding: 7px 18px;
+    border-radius: 2px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}

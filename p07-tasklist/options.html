@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/options.css">
+    <title>Options - Todo list</title>
+</head>
+<body>
+    <div class="options-content">
+        <h1>Todo list Extension</h1>
+        <h3>Setting</h3>
+       
+        <div class="options_row">
+            <div class="option_label">Kiểu hiện thị danh sách công việc</div>
+            <div class="option_field">
+                <select name="list_task_show">
+                    <option value="all">Tất cả</option>
+                    <option value="completed">Hoàn thành</option>
+                    <option value="progress">Đang thực hiện</option>
+                </select>
+            </div>
+        </div>
+        <div class="options_row">
+            <div class="option_label">Màu nền của Extension</div>
+            <div class="option_field"><input type="color" name="extension_background" ></div>
+        </div>
+        
+        <div class="options_button">
+            <button type="button" name="btn-save" class="save">Save</button>
+            <button type="button" name="btn-restore-default" class="restore">Restore</button>
+        </div>
+    </div>
+    
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/options.js"></script>
+</body>
+</html>
