@@ -104,4 +104,5 @@ Install
             config: initConfig
         });
     chrome.storage.local chỉ lưu được trên trình duyệt đó thôi
+Load config
     
