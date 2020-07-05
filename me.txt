@@ -92,3 +92,6 @@ Highlight
 Theme
     Thêm tùy chọn option cho extensions
         "options_page": "options.html"
+Overrides
+    Khi cài extension TodoList này vào thì khi mở ra 1 tap mới thì mở ra trang popup TodoList
+    chrome extensions Override new tab
