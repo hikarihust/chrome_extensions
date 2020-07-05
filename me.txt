@@ -82,3 +82,6 @@ Contextmenu
         Là điều kiện xuất hiện extensions khi click chuột phải
 SendMessage
     Bắt sự kiện click khi click vào icon của extensions sau khi click chuột phải
+Highlight
+    text     = text.replace(new RegExp(message.selectionText, 'g'), htmlReplace);
+    Dùng RegExp để thay thế tất cả nội dung đã chọn, nếu ko dùng RegExp thì sẽ chỉ replace nội dung đầu tiên xuất hiện
