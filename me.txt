@@ -80,3 +80,5 @@ Contextmenu
     contexts: "all", "page", "frame", "selection", "link", "editable", "image", "video", "audio", "launcher", 
         "browser_action", "page_action", or "action"
         Là điều kiện xuất hiện extensions khi click chuột phải
+SendMessage
+    Bắt sự kiện click khi click vào icon của extensions sau khi click chuột phải
