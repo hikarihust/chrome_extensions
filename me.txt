@@ -109,4 +109,9 @@ Save config, restore
     Sau khi thực hiện chrome.storage.sync.set() để lưu xong thì cần đóng màn hình option lại 
 Validate
 Add task
+Hiển thị list task
+    Thực hiện lấy danh sách công việc khi click vào Icon của Extensions(trang popup), khi thực hiện 
+        click vào các nút Hoàn thành, Đang thực hiện, Tất cả
+    Hiện tại thì khi click vào button "Thêm" thì mới chỉ thực hiện thêm task mới vào trong storage mà chưa 
+        thực hiện hiển thị lên list task nên để hiển thị lên list task thì cần Refresh lại extensions
     
