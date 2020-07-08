@@ -114,4 +114,6 @@ Hiển thị list task
         click vào các nút Hoàn thành, Đang thực hiện, Tất cả
     Hiện tại thì khi click vào button "Thêm" thì mới chỉ thực hiện thêm task mới vào trong storage mà chưa 
         thực hiện hiển thị lên list task nên để hiển thị lên list task thì cần Refresh lại extensions
+Fix add task
+    Thực hiển thị list task lên trang popup khi thêm mới 1 task 
     

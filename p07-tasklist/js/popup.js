@@ -18,11 +18,27 @@ $( document ).ready(function() {
     $btnAddTask.click(()=> {
         chrome.storage.sync.get('tasks', function(result) {
             let currentListTask = (result.hasOwnProperty('tasks')) ? result.tasks : [];
+            let index           = currentListTask.length;
 
             currentListTask.push({
                 name  : $inputTaskName.val(),
                 status: "progress" 
             });
+
+            let xhtmlResult = `<div class="task-item mb-2">
+                                <div class="w-50 title-${ index }"><span class="task-index">${ index + 1}</span>${ $inputTaskName.val() }</div>
+                                <div class="task-item__button">
+                                    <button class="status btn-finish mr-1" data-index="${ index }">Hoàn thành</button>
+                                    <button class="delete btn-delete" data-index="${ index }">Xóa</button>
+                                </div>
+                            </div>`;
+
+            if(currentListTask.length === 1) {
+                $elmListTask.html('').append(xhtmlResult);
+                
+            } else {
+                $elmListTask.append(xhtmlResult);
+            }
 
             chrome.storage.sync.set({'tasks': currentListTask}, function() {
                 console.log(currentListTask);
