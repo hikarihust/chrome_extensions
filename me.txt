@@ -126,4 +126,6 @@ Completed
     Sau khi click vào nút hoàn thành thì nút hoàn thành của phần tử này sẽ bị xóa 
 Delete
     Xóa đi các task không cần thiết
+Filter
+    Chức năng lọc danh sách công việc
     

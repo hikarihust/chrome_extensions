@@ -77,6 +77,26 @@ $( document ).ready(function() {
             showAllTasksInHTML($elmListTask, currentListTask);
         });
     });
+
+    $(document).on('click', 'button.btn-filter', function() {
+        let status = $(this).data('filter');
+
+        $('.btn-filter').removeClass('active');
+        $(this).addClass('active');
+        
+        chrome.storage.sync.get('tasks', (data)=> {
+            let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks: [];
+
+            if(status != 'all'){
+                currentListTask = currentListTask.filter((item) => {
+                    return (item.status == status);
+                });
+            }
+
+            showAllTasksInHTML($elmListTask, currentListTask);
+        });
+        
+    });
 });
 
 function showAllTasksInHTML($elmListTask, currentListTask) {
