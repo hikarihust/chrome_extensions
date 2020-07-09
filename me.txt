@@ -128,4 +128,7 @@ Delete
     Xóa đi các task không cần thiết
 Filter
     Chức năng lọc danh sách công việc
+Load config
+    Lấy ra nhiều phần tử trong storage ra cùng 1 lúc
+    chrome.storage.sync.get(['tasks', 'config'], (data)=> {})
     

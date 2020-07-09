@@ -4,8 +4,20 @@ $( document ).ready(function() {
     let $inputTaskName       = $('input[name="input-task-name"]');
     let $btnAddTask          = $('button[name="btn-add-task"]');
 
-    chrome.storage.sync.get('tasks', (data) => {
+    chrome.storage.sync.get(['tasks', 'config'], (data)=> {
         let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks : [];
+        let config          = data.config;
+
+        $('body').css('background-color', config.extension_background);
+        $('.btn-filter').removeClass('active');
+        $('.btn-filter[data-filter="' + config.list_task_show + '"]').addClass('active');
+
+        if(config.list_task_show != 'all'){
+            currentListTask = currentListTask.filter((item) => {
+                return (item.status == config.list_task_show);
+            });
+        }
+
         showAllTasksInHTML($elmListTask, currentListTask);
     });
 
