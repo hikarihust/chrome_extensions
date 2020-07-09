@@ -116,4 +116,12 @@ Hiển thị list task
         thực hiện hiển thị lên list task nên để hiển thị lên list task thì cần Refresh lại extensions
 Fix add task
     Thực hiển thị list task lên trang popup khi thêm mới 1 task 
+Completed
+    Đánh dấu 1 công việc nào đó đã hoàn thành hay chưa, khi click bào Button Hoàn thành thì trạng thái của task
+        đó được chuyển sang trạng thái là đã hoàn thành
+    <button class="status btn-finish mr-1" data-index="${ index }">Hoàn thành</button>
+    let index = $(this).data('index');
+    $(document).on('click', 'button.status', function() {}
+        Nếu không dùng cách viết này thì không bắt được sự kiện click khi click vào các phần tử được thêm vào sau 
+    Sau khi click vào nút hoàn thành thì nút hoàn thành của phần tử này sẽ bị xóa 
     

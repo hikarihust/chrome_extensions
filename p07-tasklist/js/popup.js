@@ -47,6 +47,19 @@ $( document ).ready(function() {
             $inputTaskName.val('');
             $btnAddTask.attr('disabled', true);
         });
+    });
+
+    $(document).on('click', 'button.status', function() {
+        let index = $(this).data('index');
+        chrome.storage.sync.get('tasks', (data)=> {
+            let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks: [];
+
+            currentListTask[index].status = 'completed';
+            chrome.storage.sync.set({'tasks': currentListTask});
+
+            $(this).remove();
+            $('.task-item .title-'+ index).addClass('text-line-through');
+        });
     })
 });
 
