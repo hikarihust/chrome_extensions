@@ -4,7 +4,10 @@ $( document ).ready(function() {
     let $inputTaskName       = $('input[name="input-task-name"]');
     let $btnAddTask          = $('button[name="btn-add-task"]');
 
-    getAllTasks($elmListTask, 'all');
+    chrome.storage.sync.get('tasks', (data) => {
+        let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks : [];
+        showAllTasksInHTML($elmListTask, currentListTask);
+    });
 
     $inputTaskName.keyup(function(e) {
         if ($inputTaskName.val().length >= 3) {
@@ -25,6 +28,8 @@ $( document ).ready(function() {
                 status: "progress" 
             });
 
+            showAllTasksInHTML($elmListTask, currentListTask);
+            /*
             let xhtmlResult = `<div class="task-item mb-2">
                                 <div class="w-50 title-${ index }"><span class="task-index">${ index + 1}</span>${ $inputTaskName.val() }</div>
                                 <div class="task-item__button">
@@ -39,6 +44,7 @@ $( document ).ready(function() {
             } else {
                 $elmListTask.append(xhtmlResult);
             }
+            */
 
             chrome.storage.sync.set({'tasks': currentListTask}, function() {
                 console.log(currentListTask);
@@ -61,37 +67,44 @@ $( document ).ready(function() {
             $('.task-item .title-'+ index).addClass('text-line-through');
         });
     })
+
+    $(document).on('click', 'button.delete', function() {
+        let index = $(this).data('index');
+        chrome.storage.sync.get('tasks', (data)=> {
+            let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks: [];
+            currentListTask.splice(index, 1);
+            chrome.storage.sync.set({'tasks': currentListTask});
+            showAllTasksInHTML($elmListTask, currentListTask);
+        });
+    });
 });
 
-function getAllTasks($elmListTask, status = null) {
-    chrome.storage.sync.get('tasks', (data) => {
-        let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks : [];
-        let total           = currentListTask.length;
-        let xhtmlResult     = "";
+function showAllTasksInHTML($elmListTask, currentListTask) {
+    let total           = currentListTask.length;
+    let xhtmlResult     = "";
 
-        if(total > 0) {
-            for(let i = 0; i < total; i++) {
-                let currentItem     = currentListTask[i];
-                let textLineThrough = '';
-                let buttonCompleted = `<button class="status btn-finish mr-1" data-index="${ i }">Hoàn thành</button>`;
-    
-                if(currentItem.status === 'completed'){
-                    textLineThrough = 'text-line-through';
-                    buttonCompleted = '';
-                }
-    
-                xhtmlResult += `<div class="task-item mb-2">
-                    <div class="w-50 title-${ i } ${textLineThrough}"><span class="task-index">${ i + 1}</span>${currentItem.name}</div>
-                    <div class="task-item__button">
-                        ${buttonCompleted}
-                        <button class="delete btn-delete" data-index="${ i }">Xóa</button>
-                    </div>
-                </div>`;
+    if(total > 0) {
+        for(let i = 0; i < total; i++) {
+            let currentItem     = currentListTask[i];
+            let textLineThrough = '';
+            let buttonCompleted = `<button class="status btn-finish mr-1" data-index="${ i }">Hoàn thành</button>`;
+
+            if(currentItem.status === 'completed'){
+                textLineThrough = 'text-line-through';
+                buttonCompleted = '';
             }
-        } else {
-            xhtmlResult = "Chưa có công việc nào";
-        }
 
-        $elmListTask.html(xhtmlResult);
-    });
+            xhtmlResult += `<div class="task-item mb-2">
+                <div class="w-50 title-${ i } ${textLineThrough}"><span class="task-index">${ i + 1}</span>${currentItem.name}</div>
+                <div class="task-item__button">
+                    ${buttonCompleted}
+                    <button class="delete btn-delete" data-index="${ i }">Xóa</button>
+                </div>
+            </div>`;
+        }
+    } else {
+        xhtmlResult = "Chưa có công việc nào";
+    }
+
+    $elmListTask.html(xhtmlResult);
 }

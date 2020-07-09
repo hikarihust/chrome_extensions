@@ -124,4 +124,6 @@ Completed
     $(document).on('click', 'button.status', function() {}
         Nếu không dùng cách viết này thì không bắt được sự kiện click khi click vào các phần tử được thêm vào sau 
     Sau khi click vào nút hoàn thành thì nút hoàn thành của phần tử này sẽ bị xóa 
+Delete
+    Xóa đi các task không cần thiết
     
