@@ -140,4 +140,13 @@ Notify
 Badge
     Thống kê số lượng công việc
     -> Bắt được sự thay đổi của storage
+Publish
+    Publish in the Chrome Web Store 
+    chrome extension Publish
+        https://developer.chrome.com/webstore/publish
+    Create your item’s zip file
+    Create a developer account
+    Upload your item
+    Add assets for your listing
+    Submit your item for publishing
     
