@@ -3,6 +3,21 @@ $( document ).ready(function() {
     let $elmListTask         = $('div#area-list-task');
     let $inputTaskName       = $('input[name="input-task-name"]');
     let $btnAddTask          = $('button[name="btn-add-task"]');
+    // let notificationOptions  = {
+    //     type    : 'basic',
+    //     iconUrl : '../images/icon_48.png',
+    //     title   : 'Thông báo',
+    //     message : 'Bạn đã thêm công việc thành công!!',
+    //     priority: 1
+    // };
+
+    let notificationOptions  = {
+        type    : 'basic',
+        iconUrl : '../images/icon_48.png',
+        title   : 'Thông báo',
+        message : 'Bạn đã thêm công việc thành công!!',
+        priority: 1
+    };
 
     chrome.storage.sync.get(['tasks', 'config'], (data)=> {
         let currentListTask = (data.hasOwnProperty('tasks')) ? data.tasks : [];
@@ -59,7 +74,8 @@ $( document ).ready(function() {
             */
 
             chrome.storage.sync.set({'tasks': currentListTask}, function() {
-                console.log(currentListTask);
+                let timestamp = new Date().getTime();
+                chrome.notifications.create("add-task-" + timestamp, notificationOptions);
             });
 
             $inputTaskName.val('');
