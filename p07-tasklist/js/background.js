@@ -9,3 +9,10 @@ chrome.runtime.onInstalled.addListener(function(){
         config: initConfig
     });
 });
+
+chrome.storage.onChanged.addListener((changes, namespace)=> {
+    if(changes.hasOwnProperty('tasks') && changes.tasks.newValue.length >= 0) {
+        chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+        chrome.browserAction.setBadgeText ( { "text": changes.tasks.newValue.length + "" } );
+    }
+});

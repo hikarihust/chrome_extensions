@@ -137,4 +137,7 @@ Notify
     Permissions: "notifications"
     Lỗi khi không hiển thị được câu thông báo
     Open Chrome > Go chrome://flags > Search Enable native notifications > Change it to Disabled > Relaunch Chrome
+Badge
+    Thống kê số lượng công việc
+    -> Bắt được sự thay đổi của storage
     
